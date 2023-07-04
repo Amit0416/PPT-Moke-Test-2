@@ -1,0 +1,56 @@
+<!-- 1.Global Execution Context:-   The global execution context is the default context
+ that is created when the script is initially loaded. It represents the global
+  scope and contains all global variables, functions, and objects. It is the 
+  outermost context in the execution stack.
+
+
+2.Function Execution Context:-   Whenever a function is invoked,
+ a new function execution context is created. Each function has
+  its own execution context, which includes its local 
+  variables, function arguments, and a reference to the outer
+   environment (the lexical environment in which the function was defined).
+
+ 3.Variable Environment:-   The variable environment is a component of the execution 
+   context that contains all variable declarations, function declarations, and 
+   function arguments. It sets up the initial scope and allows variable and function 
+   hoisting, making variables accessible even before they are declared.
+
+
+4. Scope Chain:-   The scope chain is created based on the lexical environment of the code.
+ It determines the accessibility of variables and functions within nested scopes. 
+ Each execution context has a reference to its outer environment, forming a chain
+  of environments that can be traversed to resolve variable and function references.
+
+
+  5.This Value:-    The this value refers to the object that the function is bound to or the
+   context in which the function is called. It is determined dynamically based on how
+    the function is invoked. -->
+
+
+    +-----------------------------+
+    |         Global Context       |
+    |-----------------------------|
+    | Variable Environment       |
+    | Scope Chain                 |
+    | this Value                  |
+    +-----------------------------+
+              |
+              | [Function Execution]
+              |
+    +-----------------------------+
+    |    Function Context 1       |
+    |-----------------------------|
+    | Variable Environment       |
+    | Scope Chain                 |
+    | this Value                  |
+    +-----------------------------+
+              |
+              | [Nested Function Execution]
+              |
+    +-----------------------------+
+    |    Function Context 2       |
+    |-----------------------------|
+    | Variable Environment       |
+    | Scope Chain                 |
+    | this Value                  |
+    +-----------------------------+
